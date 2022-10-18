@@ -1,22 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const handleSubmit = () => {
-    console.log("submit");
-};
 ---
 
 <Layout title="signin">
     <div class="container">
         <div class="sign-window">
-            <form class="form" method="POST">
+            <div id="signin" class="form">
                 <h3>Sign in</h3>
-                <label for="login">login</label>
-                <input name="login" type="text" />
-                <label for="password">password</label>
-                <input name="password" type="password" />
-                <button name="login" onclick="handleSubmit">sign in</button>
-            </form>
+                <span>username</span>
+                <input id="username" type="text" />
+                <span>password</span>
+                <input id="password" type="password" />
+                <button class="btn btn-primary" onclick="handleSignInButton(this)">ЛОГИН</button>
+            </div>
         </div>
     </div>
 </Layout>
@@ -52,15 +48,13 @@ const handleSubmit = () => {
         width: 200px;
         margin: 8px;
     }
-    .form > label {
+    /* .form > span {
         color: gray;
         margin: 2px;
-    }
+    } */
     .form > button {
         width: 100px;
         margin: 8px;
     }
-    .form > input[type="submit"] {
-        width: 100px;
-    }
+    
 </style>
