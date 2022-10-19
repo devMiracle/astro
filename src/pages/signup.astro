@@ -3,5 +3,62 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="signup">
-    <h2>Sign up</h2>
+    <div class="container">
+        <div class="sign-window">
+            <div id="signup" class="form">
+                <h3>Sign up</h3>
+                <span>username</span>
+                <input id="username" type="text" />
+                <span>email</span>
+                <input id="email" type="email" />
+                <span>password</span>
+                <input id="password" type="password" />
+                <button
+                    class="btn btn-primary"
+                    onclick="handleSignUpButton(this)">РЕГИСТРАЦИЯ</button
+                >
+            </div>
+        </div>
+    </div>
 </Layout>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sign-window {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* padding: 10px; */
+        border: 1px solid darkgray;
+        border-radius: 10px;
+    }
+    .form h3 {
+        margin: 8px 0;
+    }
+    .form > input {
+        width: 200px;
+        margin: 8px;
+    }
+    /* .form > span {
+        color: gray;
+        margin: 2px;
+    } */
+    .form > button {
+        width: 100px;
+        margin: 8px;
+    }
+</style>

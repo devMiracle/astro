@@ -4,9 +4,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host=192.168.10.102",
     "start": "astro dev",
     "build": "astro build",
+    "buildts": "astro check && tsc --build && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

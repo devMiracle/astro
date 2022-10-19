@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import { handleClick } from "../scripts/user";
 ---
 
 <Layout title="signin">
@@ -11,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
                 <input id="username" type="text" />
                 <span>password</span>
                 <input id="password" type="password" />
-                <button class="btn btn-primary" onclick="handleSignInButton(this)">ЛОГИН</button>
+                <button class="btn btn-primary">ЛОГИН</button>
             </div>
         </div>
     </div>
@@ -56,5 +58,4 @@ import Layout from "../layouts/Layout.astro";
         width: 100px;
         margin: 8px;
     }
-    
 </style>
